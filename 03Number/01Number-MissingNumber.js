@@ -19,4 +19,12 @@ const missingNumber = (nums) => {
     return nums.length * (nums.length + 1) / 2 - sum;
 }
 
-console.log(`MissingNumber: ${missingNumber(1,2)}`)
+console.log(`MissingNumber: ${missingNumber(1, 2)}`)
+
+// With Reduce
+
+const missingNumber2 = (numbers) => {
+    return numbers.length * (numbers.length + 1) / 2 - numbers.reduce((acc, num) => num + acc);
+}
+
+console.log(`MisingNumReduce: ${missingNumber2(1,2,3,4)}`)
